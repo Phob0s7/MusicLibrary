@@ -9,7 +9,6 @@ namespace Ex_Audiothèque
     class StandardPlaylist : Playlist
     {
         private List<Music> musicList = new List<Music>();
-        private string name;
 
         public StandardPlaylist (string name) : base(name)
         {
@@ -35,8 +34,13 @@ namespace Ex_Audiothèque
         {
             return
         }
-       
+
+		public override string ToString()
+		{
+			return base.ToString();
+		}
 
 
-    }
+
+	}
 }

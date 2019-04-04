@@ -26,5 +26,39 @@ namespace Ex_Audiothèque
         {
 
         }
-    }
+
+		public void RemoveArtists (Artist artist)
+		{
+
+		}
+
+		public void AddPlaylist (Playlist playlist)
+		{
+
+		}
+
+		public void RemovePlaylist(Playlist playlist)
+		{
+
+		}
+
+		public int GetMusicCount()
+		{
+			return
+		}
+
+		public Music GetMusicAt(int index)
+		{
+			return 
+		}
+
+		public override string ToString()
+		{
+			return base.ToString();
+		}
+
+
+
+
+	}
 }

@@ -42,5 +42,10 @@ namespace Ex_Audiothèque
         {
             return 
         }
-    }
+
+		public override string ToString()
+		{
+			return base.ToString();
+		}
+	}
 }

@@ -10,7 +10,6 @@ namespace Ex_Audiothèque
     {
         private string title;
         private int duration;
-        private int rating;
         public enum MusicRating
         {
             NO_STAR,
@@ -34,7 +33,7 @@ namespace Ex_Audiothèque
 
         }
 
-        public void AddCompser(Artist composer)
+        public void AddComposer(Artist composer)
         {
 
         }
@@ -43,5 +42,20 @@ namespace Ex_Audiothèque
         {
 
         }
-    }
+
+		public override string ToString()
+		{
+			return base.ToString();
+		}
+
+		public override bool Equals(object obj)
+		{
+			var music = obj as Music;
+			return music != null &&
+				   title == music.title &&
+				   duration == music.duration &&
+				   EqualityComparer<List<Artist>>.Default.Equals(composer, music.composer) &&
+				   EqualityComparer<List<Artist>>.Default.Equals(interpreter, music.interpreter);
+		}
+	}
 }

@@ -10,5 +10,10 @@ namespace Ex_Audiothèque
     {
         private string name;
         private string firstName;
-    }
+
+		public override string ToString()
+		{
+			return base.ToString();
+		}
+	}
 }

@@ -25,11 +25,16 @@ namespace Ex_Audiothèque
             return 
         }
 
-        public int GetMuiscCount()
+        public int GetMusicCount()
         {
             return 
         }
 
         abstract protected List<Music> GetMusicList();
-       
-}
+
+		public override string ToString()
+		{
+			return base.ToString();
+		}
+
+	}
