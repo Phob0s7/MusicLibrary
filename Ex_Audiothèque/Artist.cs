@@ -8,5 +8,7 @@ namespace Ex_Audiothèque
 {
     class Artist
     {
+        private string name;
+        private string firstName;
     }
 }

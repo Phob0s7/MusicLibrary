@@ -16,11 +16,32 @@ namespace Ex_Audiothèque
             NO_STAR,
             ONE_STAR,
             TWO_STAR,
-            THREE_STAR
-
-              
+            THREE_STAR,
+            FOUR_STAR,
+            FIVE_STAR
         }
 
-        List<Artiste> = new List<>();
+        private List<Artist> composer = new List<Artist>();
+        private List<Artist> interpreter = new List<Artist>();
+
+        public void AddInterpret(Artist interpret)
+        {
+
+        }
+
+        public void ClearInterpret()
+        {
+
+        }
+
+        public void AddCompser(Artist composer)
+        {
+
+        }
+
+        public void ClearComposer()
+        {
+
+        }
     }
 }
