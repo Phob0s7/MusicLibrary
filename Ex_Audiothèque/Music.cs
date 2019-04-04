@@ -21,11 +21,14 @@ namespace Ex_Audiothèque
         }
 
         private List<Artist> composer = new List<Artist>();
-        private List<Artist> interpreter = new List<Artist>();
+        private List<Artist> interpreters = new List<Artist>();
 
         public void AddInterpret(Artist interpret)
         {
-
+			if (!interpret(interpret))
+			{
+				interpreters.Add(interpret);
+			}
         }
 
         public void ClearInterpret()
@@ -56,6 +59,16 @@ namespace Ex_Audiothèque
 				   duration == music.duration &&
 				   EqualityComparer<List<Artist>>.Default.Equals(composer, music.composer) &&
 				   EqualityComparer<List<Artist>>.Default.Equals(interpreter, music.interpreter);
+		}
+
+		public override int GetHashCode()
+		{
+			var hashCode = 2071512598;
+			hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(title);
+			hashCode = hashCode * -1521134295 + duration.GetHashCode();
+			hashCode = hashCode * -1521134295 + EqualityComparer<List<Artist>>.Default.GetHashCode(composer);
+			hashCode = hashCode * -1521134295 + EqualityComparer<List<Artist>>.Default.GetHashCode(interpreter);
+			return hashCode;
 		}
 	}
 }
